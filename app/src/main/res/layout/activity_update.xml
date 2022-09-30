@@ -6,19 +6,19 @@
     android:layout_height="match_parent"
     android:background="@color/bg_color"
     android:padding="20dp"
-    tools:context=".Activity.AddActivity">
+    tools:context=".Activity.UpdateActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-android:layout_gravity="center"
+        android:layout_gravity="center"
         android:gravity="center"
         android:orientation="vertical">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
 
-            android:text="@string/task_details"
+            android:text="@string/update_task_details"
             android:layout_gravity="center"
             android:gravity="center"
             android:textSize="26sp"
@@ -46,7 +46,7 @@ android:layout_gravity="center"
                     android:textColor="@color/white"
                     android:textStyle="bold" />
                 <EditText
-                    android:id="@+id/etTask"
+                    android:id="@+id/etUpdateTask"
                     android:layout_marginBottom="12sp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -92,16 +92,35 @@ android:layout_gravity="center"
                 </RadioGroup>
 
 
-
-                <Button
-                    android:id="@+id/btnSave"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/shape"
-                    android:layout_marginVertical="50dp"
-                    android:layout_marginHorizontal="60dp"
-                    android:text="@string/save"
-                    android:textColor="@color/ui" />
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/btnUpdate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="60dp"
+                        android:layout_marginVertical="30dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/shape"
+                        android:text="@string/update"
+                        android:textColor="@color/ui" />
+
+                    <Button
+                        android:id="@+id/btnDelete"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="60dp"
+                        android:layout_marginVertical="10dp"
+                        android:layout_weight="1"
+
+                        android:backgroundTint="@color/white"
+                        android:background="@drawable/secondary_button"
+                        android:text="@string/delete"
+                        android:textColor="@color/white" />
+                </LinearLayout>
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>

@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">TodoApp</string>
+    <string name="save">Save</string>
+    <string name="priority">Select Priority</string>
+    <string name="high">High</string>
+    <string name="hint_medium">Medium</string>
+    <string name="hint_low">Low</string>
+    <string name="task_details">Task Detail</string>
+    <string name="task">Enter task</string>
+    <string name="update_task_details">Update Task</string>
+    <string name="update">Update</string>
+    <string name="delete">Delete</string>
 </resources>
