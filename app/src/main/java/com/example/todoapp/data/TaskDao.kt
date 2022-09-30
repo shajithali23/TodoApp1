@@ -5,18 +5,18 @@ import androidx.room.*
 @Dao
 interface TaskDao {
 
-    @Insert
-    suspend fun insertTask(entity: TaskEntity)
+//    @Insert(onConflict = OnConflictStrategy.IGNORE)
+//    suspend fun insertTask(entity: TaskEntity)
+//
+//    @Update
+//    suspend fun updateTask(entity: TaskEntity)
+//
+//    @Delete
+//    suspend fun deleteTask(entity: TaskEntity)
 
-    @Update
-    suspend fun updateTask(entity: TaskEntity)
-
-    @Delete
-    suspend fun deleteTask(entity: TaskEntity)
-
-    @Query("Delete from todo")
-    suspend fun deleteAll()
-
-    @Query("Select * from Todo")
-    suspend fun getTasks():List<TaskInfo>
+//    @Query("Delete from to_do")
+//    suspend fun deleteAll()
+//
+//    @Query("Select * from to_do")
+//     suspend fun getTasks():List<TaskInfo>
 }

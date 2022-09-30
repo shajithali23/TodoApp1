@@ -61,14 +61,14 @@ android:layout_gravity="center"
                     android:textColor="@color/white"
                     android:textStyle="bold" />
                 <RadioGroup
-                    android:id="@+id/genderGroup"
+                    android:id="@+id/rgPriority"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:gravity="center"
                     android:orientation="horizontal">
                     <RadioButton
-                        android:id="@+id/genderMale"
+                        android:id="@+id/rbLow"
                         android:layout_marginHorizontal="4dp"
                         android:textColor="@color/white"
                         android:checked="true"
@@ -76,14 +76,14 @@ android:layout_gravity="center"
                         android:layout_height="wrap_content"
                         android:text="@string/hint_low"/>
                     <RadioButton
-                        android:id="@+id/genderFemale"
+                        android:id="@+id/rbMedium"
                         android:textColor="@color/white"
                         android:layout_marginHorizontal="4dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/hint_medium"/>
                     <RadioButton
-                        android:id="@+id/genderOthers"
+                        android:id="@+id/rbHigh"
                         android:textColor="@color/white"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"

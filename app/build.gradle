@@ -1,6 +1,5 @@
 plugins {
     id 'com.android.application'
-    id 'kotlin-android-extensions'
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-kapt'
 }
@@ -8,7 +7,9 @@ plugins {
 android {
     namespace 'com.example.todoapp'
     compileSdk 32
-
+    buildFeatures {
+        viewBinding true
+    }
     defaultConfig {
         applicationId "com.example.todoapp"
         minSdk 23
@@ -18,7 +19,11 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
-
+    kapt {
+        arguments {
+            arg("room.schemaLocation", "$projectDir/schemas")
+        }
+    }
     buildTypes {
         release {
             minifyEnabled false
@@ -48,8 +53,10 @@ dependencies {
 
 
 
-    implementation("androidx.room:room-runtime:2.4.3")
-    annotationProcessor "androidx.room:room-compiler:2.4.3"
-    kapt("androidx.room:room-compiler:2.4.3")
-    implementation("androidx.room:room-ktx:2.4.3")
+    def room_version = "2.4.3"
+    implementation 'androidx.room:room-runtime:2.4.2'
+    kapt 'androidx.room:room-compiler:2.4.2'
+    implementation 'androidx.room:room-ktx:2.4.2'
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.4.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0'
 }

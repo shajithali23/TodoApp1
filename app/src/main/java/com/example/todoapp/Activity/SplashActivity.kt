@@ -7,6 +7,7 @@ import android.os.Looper
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import androidx.room.Room
+
 import com.example.todoapp.R
 import com.example.todoapp.data.TaskInfo
 import com.example.todoapp.data.TaskObject
@@ -22,10 +23,10 @@ class SplashActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
         db= Room.databaseBuilder(
-            applicationContext,TodoDatabase::class.java,"Todo"
+            applicationContext,TodoDatabase::class.java,"To_Do"
         ).build()
         GlobalScope.launch {
-            TaskObject.taskList=db.dao().getTasks() as MutableList<TaskInfo>
+//            TaskObject.taskList=db.dao().getTasks() as MutableList<TaskInfo>
         }
         window.setFlags(
             WindowManager.LayoutParams.FLAG_FULLSCREEN,

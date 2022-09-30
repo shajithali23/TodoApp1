@@ -5,12 +5,12 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import androidx.room.Room
 import com.example.todoapp.R
 import com.example.todoapp.adapter.TaskAdapter
 import com.example.todoapp.data.TaskObject
 import com.example.todoapp.data.TodoDatabase
-import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
     private lateinit var db: TodoDatabase
@@ -21,6 +21,7 @@ class MainActivity : AppCompatActivity() {
         db= Room.databaseBuilder(
             applicationContext,TodoDatabase::class.java,"Todo"
         ).build()
+        var task_view=findViewById<RecyclerView>(R.id.task_view)
         task_view.adapter=TaskAdapter(TaskObject.getAllTask())
         task_view.layoutManager=LinearLayoutManager(this)
 

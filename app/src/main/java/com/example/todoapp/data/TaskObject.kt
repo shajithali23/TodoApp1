@@ -3,7 +3,9 @@ package com.example.todoapp.data
 object TaskObject {
     var taskList= mutableListOf<TaskInfo>()
 
-    fun addTask(title:String,priority:String){}
+    fun addTask(task:String,priority:String){
+        taskList.add(TaskInfo(task,priority))
+    }
 
     fun getAllTask():List<TaskInfo>{
         return  taskList

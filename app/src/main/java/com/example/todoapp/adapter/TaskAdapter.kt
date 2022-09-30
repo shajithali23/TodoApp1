@@ -5,17 +5,18 @@ import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.todoapp.Activity.UpdateActivity
 import com.example.todoapp.R
 import com.example.todoapp.data.TaskInfo
-import kotlinx.android.synthetic.main.list_task.view.*
 
 class TaskAdapter(var task:List<TaskInfo>): RecyclerView.Adapter<TaskAdapter.viewHolder>() {
     class viewHolder(itemView: View):RecyclerView.ViewHolder(itemView){
-        var task=itemView.taskDetail
-        var priority=itemView.taskPriority
-        var taskLayout=itemView.taskLayout
+        var task=itemView.findViewById<TextView>(R.id.taskDetail)
+        var priority=itemView.findViewById<TextView>(R.id.taskPriority)
+        var taskLayout=itemView.findViewById<LinearLayout>(R.id.taskLayout)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): viewHolder {
