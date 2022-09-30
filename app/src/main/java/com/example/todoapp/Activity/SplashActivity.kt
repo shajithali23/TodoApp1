@@ -23,10 +23,11 @@ class SplashActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
         db= Room.databaseBuilder(
-            applicationContext,TodoDatabase::class.java,"To_Do"
+            applicationContext,TodoDatabase::class.java,"Todo"
+
         ).build()
         GlobalScope.launch {
-//            TaskObject.taskList=db.dao().getTasks() as MutableList<TaskInfo>
+            TaskObject.taskList=db.dao().getTasks() as MutableList<TaskInfo>
         }
         window.setFlags(
             WindowManager.LayoutParams.FLAG_FULLSCREEN,

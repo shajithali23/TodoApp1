@@ -28,8 +28,8 @@ class TaskAdapter(var task:List<TaskInfo>): RecyclerView.Adapter<TaskAdapter.vie
     override fun onBindViewHolder(holder: viewHolder, position: Int) {
        when(task[position].priority.lowercase()){
            "high"->holder.taskLayout.setBackgroundColor(Color.parseColor("#F05454"))
-           "medium"->holder.taskLayout.setBackgroundColor(Color.parseColor("#EDC988"))
-           "low"->holder.taskLayout.setBackgroundColor(Color.parseColor("#F05454"))
+           "medium"->holder.taskLayout.setBackgroundColor(Color.parseColor("#545454"))
+           "low"->holder.taskLayout.setBackgroundColor(Color.parseColor("#000000"))
        }
         holder.task.text=task[position].task
         holder.priority.text=task[position].priority

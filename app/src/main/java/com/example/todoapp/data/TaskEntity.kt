@@ -8,9 +8,8 @@ import androidx.room.PrimaryKey
 data class TaskEntity (
     @PrimaryKey(autoGenerate=true)
 
-    @NonNull
-    @ColumnInfo(name = "id")
+
     var id:Int,
-    var title:String,
+    var task:String,
     var priority:String
         )
